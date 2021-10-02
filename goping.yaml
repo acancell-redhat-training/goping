@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acancell-goping
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acancell-goping
+  template:
+    metadata:
+      labels:
+        app: acancell-goping
+    spec:
+      containers:
+      - name: acancell-goping
+        image: quay.io/acancell-redhat-training/goping:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /ping
+            port: 8080		
+          initialDelaySeconds: 3
+          periodSeconds: 2

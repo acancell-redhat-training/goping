@@ -1,2 +1,4 @@
 # goping
-Basic demo for Quay/OCP
+Request: `curl -w '\n' $host:8080/ping`
+
+Reply: *{"message": "OK: PONG"}*
