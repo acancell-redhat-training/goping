@@ -33,7 +33,7 @@ func livenessResponse(w http.ResponseWriter, r *http.Request) {
 
 func main() {
   log.Println("Goping started")
-  http.HandleFunc("/",apiResponse)
+  //http.HandleFunc("/",apiResponse)
   http.HandleFunc("/ping",livenessResponse)
   log.Fatal(http.ListenAndServe(":8080",nil))
 }
