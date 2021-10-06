@@ -1,10 +1,25 @@
 ---
+kind: Service
+apiVersion: v1
+metadata:
+  name: acancell-goping
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+  selector:
+    app: acancell-goping
+    env: dev
+  type: ClusterIP
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: acancell-goping
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: acancell-goping
@@ -12,6 +27,7 @@ spec:
     metadata:
       labels:
         app: acancell-goping
+        env: dev
     spec:
       containers:
       - name: acancell-goping
