@@ -1,6 +1,6 @@
 ---
-kind: Route
 apiVersion: route.openshift.io/v1
+kind: Route
 metadata:
   name: acancell-goping
 spec:
@@ -11,8 +11,8 @@ spec:
   port:
     targetPort: http
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: acancell-goping
 spec:
