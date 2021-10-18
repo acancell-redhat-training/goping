@@ -11,4 +11,4 @@
 `oc delete project "acancell-learning" --force --grace-period=0`
 ## OCP PODS
 ### QUICK POD FOR TESTS
-`oc run bashpod -it --rm --image=registry.access.redhat.com/ubi8/ubi -- bash`
+`oc run test-bash -it --rm --image=registry.access.redhat.com/ubi8/ubi -- bash`
