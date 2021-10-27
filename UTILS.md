@@ -12,3 +12,9 @@
 ## OCP PODS
 ### QUICK POD FOR TESTS
 `oc run test-bash -it --rm --image=registry.access.redhat.com/ubi8/ubi -- bash`
+### USEFUL PACKAGES TO INSTALL ON TEST POD
+Package | Tool(s)
+------- | -------
+`procps-ng` | `free`
+`bind-utils` | `dig`
+
