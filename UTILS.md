@@ -4,11 +4,11 @@
 # OCP
 ## OCP PROJECTS
 ### Create OCP project
-`oc new-project "acancell-learning"`
+`oc new-project "$PROJECT_NAME"`
 ### Switch to OCP project
-`oc project "acancell-learning"`
+`oc project ""$PROJECT_NAME"`
 ### Destroy OCP project
-`oc delete project "acancell-learning" --force --grace-period=0`
+`oc delete project "$PROJECT_NAME" --force --grace-period=0`
 ## OCP PODS
 ### QUICK POD FOR TESTS
 `oc run test-bash -it --rm --image=registry.access.redhat.com/ubi8/ubi -- bash`

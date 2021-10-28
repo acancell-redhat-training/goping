@@ -1,8 +1,14 @@
 ---
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  name: acancell-learning
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: acancell-goping
+  namespace: acancell-learning
 spec:
   rules:
   - host: acancell-goping.example.internal
@@ -20,6 +26,7 @@ spec:
 #kind: Route
 #metadata:
 #  name: acancell-goping
+#  namespace: acancell-learning
 #spec:
 #  host: acancell-goping.example.internal
 #  to:
@@ -32,6 +39,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: acancell-goping
+  namespace: acancell-learning
 spec:
   ports:
     - name: http
@@ -47,6 +55,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: acancell-goping
+  namespace: acancell-learning
 spec:
   replicas: 2
   selector:
