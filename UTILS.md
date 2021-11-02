@@ -15,6 +15,6 @@
 ### USEFUL PACKAGES TO INSTALL ON TEST POD
 Package | Tool(s)
 ------- | -------
-`procps-ng` | `free`
+`procps-ng` | `free`,`top`
 `bind-utils` | `dig`
 
